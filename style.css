@@ -1,0 +1,358 @@
+/*fontes*/
+@font-face {
+	font-family: 'Helvetica';
+	src: url('./assets/fonts/Helvetica.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('./assets/fonts/Quicksand.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Urbanist';
+	src: url('./assets/fonts/Urbanist.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*fundo*/
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/imgs/background.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+/*banner gossip girl*/
+header {
+    font-family: 'Helvetica';
+    font-size: 13vw;
+    font-weight: 100;
+    margin: 0;
+    color: #F9FAC7;
+    text-shadow: 0 0 5px #a0a0a0;
+    text-align: center;
+}
+
+/*conteúdo*/
+main {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*título (dos posts)*/
+h1 {
+    font-family: 'Helvetica';
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #000000; /* Cor de destaque para o título do post */
+    text-align: center;
+}
+
+/*subtitulo (do sidebar left, welcome, gossip, pics...)*/
+h2 {
+    font-family: 'Urbanist';
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 5px 0px 0px 0px;
+    text-align: justify;
+}
+
+/*parágrafo (dos posts)*/
+p {
+    font-family: 'Helvetica';
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: justify;
+}
+
+/*bloco de citação longa (do sidebar left, welcome, gossip, pics...)*/
+blockquote {
+    font-family: 'Helvetica';
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin: 0px;
+    text-align: left;
+    line-height: 1.3;
+    color: #fff;
+}
+
+/*citação curta (assinatura xoxo Gossip Girl)*/
+q {
+    font-family: 'Helvetica';
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #19d6d3;
+    quotes: none;
+}
+
+/*sessão dos posts*/
+section.main-post {
+    flex-grow: 1;
+    max-width: 360px;
+    margin-top: 35px;
+}
+
+/*post*/
+article.post {
+    max-width: 360px;
+    margin-top: 35px;
+    background-color: #fffffff2;
+    color: var(--post-text-color);
+    padding: 10px 30px 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 15px #ffffff33;
+    margin-bottom: 40px;
+    text-align: right;
+}
+
+/*imagem do post*/
+article.post img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px #00000033;
+}
+
+/*coluna esquerda (welcome, gossip, pics...)*/
+aside.sidebar-left {
+    flex-basis: 200px;
+    line-height: 1.6;
+}
+
+/*coluna direita (home, posts, pics...)*/
+aside.sidebar-right {
+    padding: 20px 0px 0px 0px;
+}
+
+/*circulos dos icones coluna direita*/
+.nav-circles a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95px;
+    height: 80px;
+    margin: 0 auto 25px auto;
+    background-color: #d6c39a;
+    border-radius: 100px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Urbanist';
+    font-weight: 550;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    justify-content: flex-end;
+    padding: 5px 0px 6px 0px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/*imagem círculo dos icones*/
+.nav-circles img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin: 100px 0px 0px 0px;
+    filter: grayscale(50%);
+}
+
+/*círculo dos icones ao passar o mouse*/
+.nav-circles a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #d6c39a;
+}
+
+div.search-map {
+    background: linear-gradient(to left, #eaaa6f, #dac495, #f1e6ce, #fff);
+    border-radius: 20px;
+    padding: 10px 10px 20px 10px;
+    width: 130px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Estilo do Logo "gossip girl LIVE" */
+.gg-live-logo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 5px;
+    position: relative;
+    display: flex; /* Transforma o container em flexbox */
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente (texto, imagem, etc.) */
+}
+
+
+/* Estilo da imagem do ícone da TV */
+.tv-frame-image {
+    width: 60px;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    display: block; 
+    
+}
+
+/* Estilo para o Texto "LIVE" sobreposto */
+.live-text-overlay {
+    position: absolute; 
+    top: 55px; /* Valor aproximado para descer o LIVE (Ajuste até ficar dentro) */
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 2px 4px;
+}
+
+/* Estilo para os formulários de busca */
+.search-form-gg {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.search-form-gg label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Campo de input e ícone de lupa */
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-bottom: 10px;
+}
+
+.search-icon-gg {
+    font-size: 0.8rem;
+    color: #999;
+    margin-right: 5px;
+}
+
+.search-form-gg input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    padding: 3px 0;
+    font-size: 0.8rem;
+    font-family: 'Helvetica', sans-serif;
+    outline: none;
+}
+
+/* Botão "search" */
+.search-button-gg {
+    background-color: #f7f7f7;
+    color: #333;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    padding: 3px 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.search-button-gg:hover {
+    background-color: #eee;
+}
+
+/* Estilo do Mapa */
+.map-container {
+    position: relative;
+    width: 90%;
+    margin: 15px 0 10px 0;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.8; /* Suaviza a imagem */
+}
+
+/* Simulação do texto vertical "SPOTTED" */
+.map-text {
+    position: absolute;
+    top: 50%;
+    left: 70%; 
+    transform: translate(-50%, -50%) rotate(90deg);
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #D97366; /* Cor de destaque (vermelho/laranja) */
+    letter-spacing: 5px;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Ajuste para o segundo formulário de busca (abaixo do mapa) */
+.map-search {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* --- MEDIA QUERIES (Para Responsividade) --- */
+@media (max-width: 900px) {
+    .blog-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sidebar-left, .sidebar-right {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 650px; /* Limita a largura em telas menores */
+    }
+
+    .sidebar-right {
+        order: -1; /* Move os círculos para cima em telas menores */
+        display: flex;
+        justify-content: space-around;
+        padding-top: 0;
+    }
+
+    .blog-header h1 {
+        font-size: 15vw;
+        letter-spacing: 3vw;
+    }
+}
