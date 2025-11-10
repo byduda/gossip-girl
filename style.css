@@ -24,31 +24,28 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('./assets/imgs/background.jpg'); 
+    background-image: url('./assets/imgs/background.png'); 
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top;
+    background-position: center;
     background-attachment: fixed;
 }
 
 /*banner gossip girl*/
-header {
-    font-family: 'Helvetica';
-    font-size: 13vw;
-    font-weight: 100;
-    margin: 0;
-    color: #F9FAC7;
-    text-shadow: 0 0 5px #a0a0a0;
-    text-align: center;
+header img {
+    width: 800px; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
 }
+
 
 /*conteúdo*/
 main {
     display: flex;
     justify-content: center;
     gap: 40px;
-    width: 100%;
-    max-width: 1200px;
+    width: 800px;
     margin: 0 auto;
 }
 
@@ -104,6 +101,13 @@ q {
     quotes: none;
 }
 
+/*divisória horizontal rule*/
+hr {
+	border: none;
+	height: 1px;
+	background: #b2ad8d;
+}
+
 /*sessão dos posts*/
 section.main-post {
     flex-grow: 1;
@@ -114,13 +118,12 @@ section.main-post {
 /*post*/
 article.post {
     max-width: 360px;
-    margin-top: 35px;
+    margin: -35px auto 60px auto;
     background-color: #fffffff2;
     color: var(--post-text-color);
     padding: 10px 30px 20px;
     border-radius: 30px;
     box-shadow: 0 0 15px #ffffff33;
-    margin-bottom: 40px;
     text-align: right;
 }
 
@@ -139,27 +142,28 @@ article.post img {
 aside.sidebar-left {
     flex-basis: 200px;
     line-height: 1.6;
+    margin: -30px 0px 0px 0px;
 }
 
 /*coluna direita (home, posts, pics...)*/
 aside.sidebar-right {
-    padding: 20px 0px 0px 0px;
+    margin: -15px 0px 0px 0px;
 }
 
 /*circulos dos icones coluna direita*/
-.nav-circles a {
+nav.nav-circles a {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 95px;
     height: 80px;
     margin: 0 auto 25px auto;
-    background-color: #d6c39a;
+    background-color: #b2ad8d;
     border-radius: 100px;
     text-decoration: none;
     color: #000;
-    font-family: 'Urbanist';
-    font-weight: 550;
+    font-family: 'Quicksand';
+    font-weight: 600;
     font-size: 1rem;
     letter-spacing: 1px;
     justify-content: flex-end;
@@ -168,7 +172,7 @@ aside.sidebar-right {
 }
 
 /*imagem círculo dos icones*/
-.nav-circles img {
+nav.nav-circles img {
     width: 60px;
     height: 60px;
     border-radius: 100%;
@@ -178,12 +182,13 @@ aside.sidebar-right {
 }
 
 /*círculo dos icones ao passar o mouse*/
-.nav-circles a:hover {
+nav.nav-circles a:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px #d6c39a;
 }
 
-div.search-map {
+/*widget de mapa (gossip girl live upper east sider...)*/
+div.widget-map {
     background: linear-gradient(to left, #eaaa6f, #dac495, #f1e6ce, #fff);
     border-radius: 20px;
     padding: 10px 10px 20px 10px;
@@ -193,141 +198,112 @@ div.search-map {
     flex-direction: column;
     align-items: center;
     font-family: 'Helvetica', sans-serif;
-}
-
-/* Estilo do Logo "gossip girl LIVE" */
-.gg-live-logo {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 27px;
+    font-weight: bold;
     color: #000;
     text-align: center;
-    line-height: 1;
-    margin-bottom: 5px;
-    position: relative;
-    display: flex; /* Transforma o container em flexbox */
-    flex-direction: column; /* Organiza os itens verticalmente */
-    align-items: center; /* Centraliza os itens horizontalmente (texto, imagem, etc.) */
+    display: inline-block;
 }
 
+/*container da tv com a live no mapa*/
+div.tv-container {
+    position: relative; 
+    display: inline-block; }
 
-/* Estilo da imagem do ícone da TV */
-.tv-frame-image {
-    width: 60px;
-    height: auto;
-    object-fit: cover;
-    margin: 0;
-    display: block; 
-    
+
+/*icon da tv no mapa*/
+img.tv {
+    display: block;
+    margin: 5px auto;
+    justify-content: center;
 }
 
-/* Estilo para o Texto "LIVE" sobreposto */
-.live-text-overlay {
+/*live da tv no mapa*/
+span.live {
     position: absolute; 
-    top: 55px; /* Valor aproximado para descer o LIVE (Ajuste até ficar dentro) */
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    color: white;
+    margin: -25px 0px 0px -15px;
+    color: #000000;
     font-size: 0.8rem;
     font-weight: bold;
-    padding: 2px 4px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
 }
 
-/* Estilo para os formulários de busca */
-.search-form-gg {
-    width: 100%;
-    margin: 10px 0;
-    text-align: center;
-}
-
-.search-form-gg label {
-    display: block;
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: #555;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-}
-
-/* Campo de input e ícone de lupa */
-.input-group {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 2px 5px;
-    margin-bottom: 10px;
-}
-
-.search-icon-gg {
-    font-size: 0.8rem;
-    color: #999;
-    margin-right: 5px;
-}
-
-.search-form-gg input[type="text"] {
-    flex-grow: 1;
-    border: none;
-    padding: 3px 0;
-    font-size: 0.8rem;
-    font-family: 'Helvetica', sans-serif;
-    outline: none;
-}
-
-/* Botão "search" */
-.search-button-gg {
-    background-color: #f7f7f7;
-    color: #333;
-    border: 1px solid #aaa;
-    border-radius: 15px;
-    padding: 3px 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    transition: background-color 0.2s;
-}
-
-.search-button-gg:hover {
-    background-color: #eee;
-}
-
-/* Estilo do Mapa */
-.map-container {
-    position: relative;
-    width: 90%;
-    margin: 15px 0 10px 0;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.map-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    opacity: 0.8; /* Suaviza a imagem */
-}
-
-/* Simulação do texto vertical "SPOTTED" */
-.map-text {
-    position: absolute;
-    top: 50%;
-    left: 70%; 
-    transform: translate(-50%, -50%) rotate(90deg);
+/*upper east sider mapa*/
+span.upper-east-sider {
+    color: #000000;
+    font-size: 0.85rem;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    margin: 15px 0px 0px 0px;
     font-family: 'Urbanist', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #D97366; /* Cor de destaque (vermelho/laranja) */
-    letter-spacing: 5px;
-    margin: 0;
-    opacity: 0.8;
 }
 
-/* Ajuste para o segundo formulário de busca (abaixo do mapa) */
-.map-search {
-    margin-top: 5px;
-    margin-bottom: 0;
+input.barra-de-pesquisa {
+    width: 100px;
+    height: 20px;
+    padding: 0px 0px 0px 25px;
+    border: 1px solid #b2ad8d;
+    border-radius: 1px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    color: #000;
+    text-align: left;
+    background-image: url('./assets/imgs/widget_lupa.png'); 
+    background-repeat: no-repeat;
+    background-position: 3px center;
+    background-size: 15px;
+    background-color: #ffffff;
+}
+
+button.search-button {
+    background: url('./assets/imgs/widget_button_search.png');
+    background-size: contain;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: block; 
+    width: 59px; 
+    height: 24px;
+    margin: 8px auto 0px auto;
+    transition: opacity 0.2s;
+    box-shadow: 0px 2px 5px rgb(61, 43, 2);
+    border-radius: 5px;
+}
+
+button.search-button:hover {
+    opacity: 0.85;
+}
+
+
+div.map {
+    width: 100%;
+    height: 130px;
+    margin: 10px auto 0 auto;
+    background: url('./assets/imgs/widget_map.png');
+    background-size: cover;
+    background-position: center;
+}
+
+button.upload-button {
+    background: url('./assets/imgs/widget_button_upload.png') no-repeat center;
+    background-size: contain;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: block; 
+    width: 100px; 
+    height: 28px;
+    margin: 8px auto 0px auto;
+    transition: opacity 0.2s;
+    box-shadow: 0px 2px 5px rgb(61, 43, 2);
+    border-radius: 7px;
+}
+
+button.upload-button:hover {
+    opacity: 0.9;
 }
 
 /* --- MEDIA QUERIES (Para Responsividade) --- */
