@@ -49,6 +49,12 @@ main {
     margin: 0 auto;
 }
 
+/*âncora de links*/
+a {
+    color: #a8cfe4;
+    margin-left: 20px;
+}
+
 /*título (dos posts)*/
 h1 {
     font-family: 'Helvetica';
