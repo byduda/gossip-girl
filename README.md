@@ -12,7 +12,7 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠻⠧⠼⠿⠛⠀⠘⠿⢤⣤⣤⡤⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-Este blog é uma recriação puramente para fins de estudo e prática de desenvolvimento web (HTML, CSS e JavaScript), inspirada na série de televisão Gossip Girl e nos livros originais.
+Este template é uma recriação puramente para fins de estudo e prática de desenvolvimento web (HTML, CSS e JavaScript), inspirada na série de televisão Gossip Girl e nos livros originais.
 
 Criação Original:
 - Livros: A série de livros Gossip Girl foi criada por Cecily von Ziegesar.
