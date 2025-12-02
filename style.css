@@ -58,12 +58,13 @@ a {
 /*título (dos posts)*/
 h1 {
     font-family: 'Helvetica';
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    margin: 0px 0px 10px 0px;
+    padding: 0;
     font-weight: 600;
     color: #000000; /* Cor de destaque para o título do post */
     text-align: center;
+    white-space: nowrap;
 }
 
 /*subtitulo (do sidebar left, welcome, gossip, pics...)*/
@@ -117,17 +118,16 @@ hr {
 /*sessão dos posts*/
 section.main-post {
     flex-grow: 1;
-    max-width: 360px;
     margin-top: 35px;
 }
 
 /*post*/
 article.post {
-    max-width: 360px;
+    max-width: 337px;
     margin: -35px auto 60px auto;
     background-color: #fffffff2;
-    color: var(--post-text-color);
-    padding: 10px 30px 20px;
+    color: #000;
+    padding: 10px 25px 20px;
     border-radius: 30px;
     box-shadow: 0 0 15px #ffffff33;
     text-align: right;
@@ -136,12 +136,24 @@ article.post {
 /*imagem do post*/
 article.post img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
     margin-bottom: 15px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 10px #00000033;
+}
+
+/*imagem do post ao clicar zoom*/
+article.post img.zoomed {
+    position: fixed; /* Fixa a imagem na tela */
+    top: 50%; /* Posiciona no centro vertical */
+    left: 50%; /* Posiciona no centro horizontal */
+    transform: translate(-50%, -50%); /* Ajusta para centralizar perfeitamente */
+    max-width: 90vw; /* Máximo de 90% da largura da tela */
+    max-height: 90vh; /* Máximo de 90% da altura da tela */
+    width: auto; /* Permite que a largura se ajuste */
+    height: auto; /* Permite que a altura se ajuste */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Sombra para destaque */
+    cursor: zoom-out; /* Mude o cursor para indicar que pode clicar para fechar */
 }
 
 /*coluna esquerda (welcome, gossip, pics...)*/
@@ -168,9 +180,9 @@ nav.nav-circles a {
     border-radius: 100px;
     text-decoration: none;
     color: #000;
-    font-family: 'Quicksand';
+    font-family: 'Helvetica';
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     letter-spacing: 1px;
     justify-content: flex-end;
     padding: 0px 0px 10px 0px;
@@ -246,6 +258,7 @@ span.upper-east-sider {
     font-family: 'Urbanist', sans-serif;
 }
 
+/*barra de pesquisa do widget*/
 input.barra-de-pesquisa {
     width: 100px;
     height: 20px;
@@ -264,6 +277,7 @@ input.barra-de-pesquisa {
     background-color: #ffffff;
 }
 
+/*botões*/
 button {
     font-family: 'Urbanist', sans-serif;
     font-size: 0.8rem;
@@ -277,10 +291,12 @@ button {
     display: block; 
 }
 
+/*botões após passar o mouse*/
 button:hover {
     opacity: 0.85;
 }
 
+/*botão (menor) de pesquisa*/
 button.search-button {
     background: url('./assets/imgs/widget_button_search.png') center no-repeat;
     background-size: contain;
@@ -288,6 +304,7 @@ button.search-button {
     height: 30px;
 }
 
+/*botão (maior) de upload*/
 button.upload-button {
     background: url('./assets/imgs/widget_button_upload.png') no-repeat center;
     background-size: contain;
@@ -295,7 +312,7 @@ button.upload-button {
     height: 30px;
 }
 
-
+/*imagem de mapa do widget*/
 div.map {
     width: auto;
     height: 130px;
@@ -305,25 +322,59 @@ div.map {
     background-position: center;
 }
 
-/*responsividade notebook*/
-@media (max-width: 1280px) {
-
-body {
-    background-size: 150%;
-    background-position: top;
+/* paleta de cores */
+.color-palette {
+    width: 100%;
+    height: auto; 
+    margin: 15px auto 15px auto; 
+    border-radius: 10px;
+    overflow: hidden; 
+    display: flex; 
 }
 
-/*responsividade notebook*/
-@media (max-width: 1280px) {
-
-body {
-    background-size: 150%;
-    background-position: top;
+.color {
+    width: 20%;
+    height: 50px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    padding: 5px; 
+    min-width: 0;
+    margin: 0; 
 }
+
+.color-palette .color:nth-child(1) {
+    background-color: #b2ad8d;
 }
 
-@media (max-width: 900px) {
+.color-palette .color:nth-child(2) {
+    background-color: #eaaa6f;
+}
 
-body {
-    background-size: cover;
+.color-palette .color:nth-child(3) {
+    background-color: #dac495;
+}
+
+.color-palette .color:nth-child(4) {
+    background-color: #fff;
+}
+
+.color-palette .color:nth-child(5) {
+    background-color: #000;
+}
+
+.color-palette .color-hex {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0; 
+    padding: 0;
+    line-height: 1;
+    text-align: justify;
+}
+
+.color:nth-child(5) .color-hex {
+    color: #fff;
 }
